@@ -1,0 +1,29 @@
+[
+  {
+    "input": "Your health concern or symptom description here",
+    "response": {
+      "possible_conditions": ["Possible conditions or diagnoses"],
+      "urgency": "Urgency level - Description of urgency",
+      "common_age_groups": "Common age groups affected",
+      "immediate_actions": "Immediate actions to take",
+      "precautions": "Precautions to consider",
+      "potential_treatments": ["Potential diagnostic tests or procedures"],
+      "medications": ["Possible medications or treatments"],
+      "lifestyle_changes": "Recommended lifestyle changes or management strategies"
+    }
+  },
+  {
+    "input": "Another health concern or symptom description",
+    "response": {
+      "possible_conditions": ["Possible conditions or diagnoses"],
+      "urgency": "Urgency level - Description of urgency",
+      "common_age_groups": "Common age groups affected",
+      "immediate_actions": "Immediate actions to take",
+      "precautions": "Precautions to consider",
+      "potential_treatments": ["Potential diagnostic tests or procedures"],
+      "medications": ["Possible medications or treatments"],
+      "lifestyle_changes": "Recommended lifestyle changes or management strategies"
+    }
+  },
+  // Add more scenarios here...
+]
