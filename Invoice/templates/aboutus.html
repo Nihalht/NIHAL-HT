@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - M S ENTERPRISES</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        /* Dynamic Hero styles */
+        .dynamic-hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #farm-landscape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 30px;
+            border-left: 2px solid #333;
+        }
+
+        /* Mission Vision Tree styles */
+        #mission-vision-tree {
+            width: 100%;
+            max-height: 400px;
+        }
+
+        /* Core Values Carousel styles */
+        .carousel-container {
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .carousel-item {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .cube-face.front {
+            background-color: #f1f1f1;
+        }
+
+        .cube-face.back {
+            background-color: #e1e1e1;
+            transform: rotateY(180deg);
+        }
+
+        /* Service Scene styles */
+        .service-scene {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            background-color: #f9f9f9;
+        }
+
+        /* Video Testimonials styles */
+        .video-testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Sustainability Meter styles */
+        .meter-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .meter {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        /* Contact Tractor styles */
+        .contact-tractor {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="static/logo.png" alt="M S ENTERPRISES Logo">
+                    <span class="company-name">M S ENTERPRISES</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/main">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-us">
+        <section class="dynamic-hero">
+            <div id="farm-landscape"></div>
+            <h1 class="reveal-text">About M S ENTERPRISES</h1>
+            <p class="reveal-text">Connecting Farmers with Innovative Agricultural Solutions</p>
+        </section>
+
+        <section class="company-overview">
+            <h2>Our Story</h2>
+            <p>Established in 2000, M S ENTERPRISES has been a trusted name in the agricultural sector for over 20 years. As a dedicated dealer and broker, we bridge the gap between manufacturers of cutting-edge agricultural machinery and local farmers, ensuring they have access to the best tools for their trade.</p>
+        </section>
+
+        <section class="company-timeline">
+            <h2>Our Journey</h2>
+            <div class="timeline" id="company-timeline">
+                <!-- Timeline items will be added here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="mission-vision-infographic">
+            <svg id="mission-vision-tree" viewBox="0 0 400 400">
+                <!-- SVG content will be added by JavaScript -->
+            </svg>
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>To empower local farmers by providing them with access to high-quality, efficient agricultural machinery, enhancing their productivity and improving their livelihoods.</p>
+            </div>
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>To be the preferred partner for farmers in their journey towards sustainable and profitable agriculture, contributing to food security and rural development.</p>
+            </div>
+        </section>
+
+        <section class="core-values-carousel">
+            <h2>Our Core Values</h2>
+            <div class="carousel-container" id="values-carousel">
+                <!-- Carousel items will be added here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="our-services">
+            <h2>What We Offer</h2>
+            <div class="service-scene" id="service-scene">
+                <!-- Interactive farm scene will be added here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="video-testimonials" id="video-testimonials">
+                <!-- Video snippets will be added here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="sustainability-meter">
+            <h2>Our Impact on Sustainable Farming</h2>
+            <div class="meter-container" id="sustainability-meters">
+                <!-- Animated meters will be added here by JavaScript -->
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Us</h2>
+            <p>We're here to assist you in finding the right agricultural solutions for your needs.</p>
+            <div class="contact-tractor" id="contact-tractor">
+                <!-- Animated tractor and contact info will be added here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 M S ENTERPRISES. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initDynamicHero();
+            initTimeline();
+            createMissionVisionTree();
+            initCoreValuesCarousel();
+            createServiceScene();
+            loadVideoTestimonials();
+            createSustainabilityMeters();
+            animateContactTractor();
+        });
+
+        function initDynamicHero() {
+            const landscape = document.getElementById('farm-landscape');
+            landscape.style.backgroundImage = "url('farm-landscape.jpg')";
+            landscape.style.backgroundSize = "cover";
+            landscape.style.backgroundPosition = "center";
+        }
+
+        function initTimeline() {
+            const timeline = document.getElementById('company-timeline');
+            const events = [
+                { year: 2000, icon: 'seedling', text: 'M S ENTERPRISES founded' },
+                { year: 2005, icon: 'tractor', text: 'Expanded to tractor dealership' },
+                { year: 2010, icon: 'warehouse', text: 'Opened new warehouse facility' },
+                { year: 2015, icon: 'award', text: 'Received "Best Agricultural Dealer" award' },
+                { year: 2020, icon: 'globe', text: 'Launched online sales platform' }
+            ];
+
+            events.forEach(event => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                item.innerHTML = `
+                    <i class="fas fa-${event.icon}"></i>
+                    <strong>${event.year}</strong>: ${event.text}
+                `;
+                timeline.appendChild(item);
+            });
+        }
+
+        function createMissionVisionTree() {
+            const tree = document.getElementById('mission-vision-tree');
+            tree.innerHTML = `
+                <path d="M200,380 Q200,280 100,200 T200,20" fill="none" stroke="green" stroke-width="5"/>
+                <circle cx="200" cy="20" r="15" fill="green"/>
+                <text x="220" y="25" fill="black">Vision</text>
+                <circle cx="200" cy="380" r="15" fill="brown"/>
+                <text x="220" y="385" fill="black">Mission</text>
+            `;
+        }
+
+        function initCoreValuesCarousel() {
+            const carousel = document.getElementById('values-carousel');
+            const values = [
+                { name: 'Integrity', icon: 'handshake', description: 'We uphold the highest standards of honesty in all our dealings.' },
+                { name: 'Innovation', icon: 'lightbulb', description: 'We constantly seek new ways to improve and advance agricultural practices.' },
+                { name: 'Customer-Centric', icon: 'users', description: 'Our customers' success is our primary focus.' },
+                { name: 'Sustainability', icon: 'leaf', description: 'We promote environmentally responsible farming practices.' },
+                { name: 'Quality', icon: 'check-circle', description: 'We ensure the highest quality in all our products and services.' }
+            ];
+
+            values.forEach(value => {
+                const item = document.createElement('div');
+                item.className = 'carousel-item';
+                item.innerHTML = `
+                    <div class="cube">
+                        <div class="cube-face front">
+                            <i class="fas fa-${value.icon} fa-3x"></i>
+                            <h3>${value.name}</h3>
+                        </div>
+                        <div class="cube-face back">
+                            <p>${value.description}</p>
+                        </div>
+                    </div>
+                `;
+                carousel.appendChild(item);
+            });
+
+            // Simple rotation on click
+            carousel.addEventListener('click', function(e) {
+                if (e.target.closest('.carousel-item')) {
+                    e.target.closest('.carousel-item').style.transform = 
+                        e.target.closest('.carousel-item').style.transform === 'rotateY(180deg)' 
+                            ? 'rotateY(0deg)' 
+                            : 'rotateY(180deg)';
+                }
+            });
+        }
+
+        function createServiceScene() {
+            const scene = document.getElementById('service-scene');
+            scene.innerHTML = `
+                <svg viewBox="0 0 800 400">
+                    <rect x="0" y="300" width="800" height="100" fill="green"/>
+                    <path d="M0,300 Q400,200 800,300" fill="none" stroke="brown" stroke-width="5"/>
+                    <circle cx="400" cy="280" r="30" fill="red"/>
+                    <rect x="370" y="250" width="60" height="30" fill="gray"/>
+                </svg>
+            `;
+            // Add click events for interactive elements
+        }
+
+        function loadVideoTestimonials() {
+            const container = document.getElementById('video-testimonials');
+            // In a real scenario, you'd load actual video elements
+            for (let i = 0; i < 3; i++) {
+                const video = document.createElement('div');
+                video.className = 'video-testimonial';
+                video.style.width = '300px';
+                video.style.height = '200px';
+                video.style.backgroundColor = '#ddd';
+                video.innerHTML = `<p>Customer Testimonial ${i+1}</p>`;
+                container.appendChild(video);
+            }
+        }
+
+        function createSustainabilityMeters() {
+            const meterContainer = document.getElementById('sustainability-meters');
+            const metrics = [
+                { name: 'Water Saved', value: 75, color: 'blue' },
+                { name: 'Energy Efficient', value: 60, color: 'green' },
+                { name: 'Waste Reduced', value: 80, color: 'orange' }
+            ];
+
+            metrics.forEach(metric => {
+                const meter = document.createElement('div');
+                meter.className = 'meter';
+                meter.innerHTML = `
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#ddd" stroke-width="10"/>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="${metric.color}" stroke-width="10"
+                                stroke-dasharray="${2 * Math.PI * 45}"
+                                stroke-dashoffset="${2 * Math.PI * 45 * (1 - metric.value / 100)}"
+                                transform="rotate(-90 50 50)"/>
+                        <text x="50" y="50" text-anchor="middle" dy=".3em" font-size="20">${metric.value}%</text>
+                    </svg>
+                    <p>${metric.name}</p>
+                `;meterContainer.appendChild(meter);
+            });
+        }
+
+        function animateContactTractor() {
+            const tractorContainer = document.getElementById('contact-tractor');
+            tractorContainer.innerHTML = `
+                <svg viewBox="0 0 800 200">
+                    <rect x="0" y="150" width="800" height="50" fill="green"/>
+                    <g id="tractor" transform="translate(-100, 100)">
+                        <rect x="10" y="30" width="80" height="40" fill="red"/>
+                        <circle cx="30" cy="70" r="20" fill="black"/>
+                        <circle cx="70" cy="70" r="20" fill="black"/>
+                    </g>
+                </svg>
+                <div id="contact-info" style="opacity: 0; transition: opacity 1s;">
+                    <p>Phone: +91 9686870408</p>
+                    <p>Email: info@msenterprises.com</p>
+                    <p>Address: [Your Company Address]</p>
+                </div>
+            `;
+
+            const tractor = document.getElementById('tractor');
+            const contactInfo = document.getElementById('contact-info');
+
+            let position = -100;
+            function moveTractor() {
+                if (position > 800) {
+                    contactInfo.style.opacity = '1';
+                    return;
+                }
+                position += 2;
+                tractor.setAttribute('transform', `translate(${position}, 100)`);
+                requestAnimationFrame(moveTractor);
+            }
+            moveTractor();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS ENTERPRISES - Finance App</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #1a2a3a;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        #logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #logo-svg {
+            width: 80%;
+            height: auto;
+            max-width: 600px;
+            max-height: 400px;
+        }
+        .company-name { 
+            font-size: 48px;
+            font-weight: 700;
+            fill: #f8d030;
+        }
+        .tagline { 
+            font-size: 24px;
+            font-weight: 400;
+            fill: #ffffff;
+        }
+        .multi-color {
+            fill: url(#gradient);
+            stroke: url(#gradient);
+            stroke-width: 2;
+        }
+        .graphic { 
+            fill: none; 
+            stroke-width: 4;
+            stroke: #f8d030;
+        }
+        .dollar-sign {
+            fill: #f8d030;
+            stroke: #f8d030;
+            stroke-width: 2;
+        }
+        .bar-graph {
+            fill: #4caf50;
+            opacity: 0;
+            animation: revealBar 1s ease-out forwards;
+        }
+        .coin {
+            fill: #f8d030;
+            opacity: 0;
+            animation: revealCoin 1s ease-out forwards;
+        }
+        .line-chart {
+            fill: none; 
+            stroke-width: 4;
+            stroke: #2196f3;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawLineChart 2s ease-out forwards;
+        }
+        @keyframes revealText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes revealBar {
+            to { opacity: 1; transform: scaleY(1); }
+        }
+        @keyframes revealCoin {
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes drawLineChart {
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes glowPulse {
+            0%, 100% { filter: drop-shadow(0 0 5px #f8d030); }
+            50% { filter: drop-shadow(0 0 20px #f8d030); }
+        }
+        .vertical-line {
+            fill: none; 
+            stroke-width: 4;
+            stroke: #f44336;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawVerticalLine 2s ease-out forwards;
+        }
+        .circle {
+            fill: none; 
+            stroke-width: 4;
+            stroke: #2196f3;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawCircle 2s ease-out forwards;
+        }
+        .horizontal-line {
+            fill: none; 
+            stroke-width: 4;
+            stroke: #3357FF;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawHorizontalLine 2s ease-out forwards;
+        }
+        @keyframes drawVerticalLine {
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes drawCircle {
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes drawHorizontalLine {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="logo-container">
+        <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <!-- Gradients -->
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f8d030;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#4caf50;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Vertical Line -->
+            <line class="vertical-line multi-color" x1="150" y1="50" x2="150" y2="250"
+                  style="animation: drawVerticalLine 2s ease-out forwards, glowPulse 4s infinite;">
+            </line>
+
+            <!-- Horizontal Line -->
+            <line class="horizontal-line multi-color" x1="150" y1="150" x2="350" y2="150"
+                  style="animation: drawHorizontalLine 2s ease-out 0.5s forwards, glowPulse 4s infinite 0.5s;">
+            </line>
+
+            <!-- Circle -->
+            <circle class="circle multi-color" cx="250" cy="250" r="100"
+                  style="animation: drawCircle 2s ease-out 1s forwards, glowPulse 4s infinite 1s;">
+            </circle>
+
+            <!-- Dollar Sign -->
+            <text class="dollar-sign multi-color" x="250" y="250" text-anchor="middle"
+                  style="animation: revealText 2s ease-out 1.5s forwards;">
+                $
+            </text>
+
+            <!-- Bar Graph -->
+            <rect x="500" y="300" width="30" height="120" class="bar-graph" style="transform-origin: bottom; animation-delay: 2s;"></rect>
+            <rect x="550" y="250" width="30" height="170" class="bar-graph" style="transform-origin: bottom; animation-delay: 2.2s;"></rect>
+            <rect x="600" y="200" width="30" height="220" class="bar-graph" style="transform-origin: bottom; animation-delay: 2.4s;"></rect>
+            
+            <!-- Coin -->
+            <circle cx="700" cy="400" r="20" class="coin" style="animation-delay: 2.6s;"></circle>
+            <circle cx="750" cy="400" r="20" class="coin" style="animation-delay: 2.8s;"></circle>
+
+            <!-- Line Chart -->
+            <path class="line-chart multi-color" d="M100 450 L200 350 L300 400 L400 300 L500 350 L600 300"
+                  style="animation-delay: 3s;">
+            </path>
+
+            <!-- Company Name -->
+            <text class="company-name" x="400" y="480" text-anchor="middle">
+                <tspan style="animation: revealText 1s ease-out 3.2s forwards; opacity: 0;">M</tspan>
+                <tspan style="animation: revealText 1s ease-out 3.4s forwards; opacity: 0;">S</tspan>
+                <tspan style="animation: revealText 1s ease-out 3.6s forwards; opacity: 0;"> ENTERPRISES</tspan>
+            </text>
+            
+            <!-- Tagline -->
+            <text class="tagline" x="400" y="520" text-anchor="middle"
+                  style="animation: revealText 1s ease-out 3.8s forwards; opacity: 0;">
+                Invoice application
+            </text>
+        </svg>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{{ url_for('main') }}";
+        }, 8000);
+    </script>
+</body>
+</html>
